@@ -1,0 +1,620 @@
+{
+	"info": {
+		"_postman_id": "e511dbd4-01ac-4210-9329-7cdd09a62486",
+		"name": "MED NUGMANOVA REQUESTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18226567"
+	},
+	"item": [
+		{
+			"name": "Admin Controller",
+			"item": [
+				{
+					"name": "language testing",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "passionFruit",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "turk@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "es-ES",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/admin/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePatient",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "pomidor",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "elvira@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/admin/deletepatient/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"deletepatient",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addPatient",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "passionFruit",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "turk@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Galina\",\r\n    \"surname\": \"Semenovna\",\r\n    \"email\": \"galina@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/admin/add/patient/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"add",
+								"patient",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editPatient",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "passionFruit",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "turk@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Galina\",\r\n    \"surname\": \"Semenovna\",\r\n    \"email\": \"galina@gmail.com\",\r\n    \"password\": \"$2a$12$qdQoGH274ej6gau51qWCjueWq74zutsk.xH/3nAFgSqsy6m1G7Ifm\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/admin/edit/patient/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"edit",
+								"patient",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkOptions",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "passionFruit",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "turk@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/admin/options",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"options"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPatientByEmailPassword",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "passionFruit",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "turk@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "HEAD",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/admin/getpatient/elvira@gmail.com/pomidor",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"getpatient",
+								"elvira@gmail.com",
+								"pomidor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDonorsByBloodType",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "passionFruit",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "turk@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/admin/getdonorsbyblood/A+",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"getdonorsbyblood",
+								"A+"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getNextAppointment",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "passionFruit",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "turk@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/admin/checknext",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"checknext"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Doctor Controller",
+			"item": [
+				{
+					"name": "getByEmailAndPassword",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/docs/emailpassword/jd@gmail.com/eagle",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"docs",
+								"emailpassword",
+								"jd@gmail.com",
+								"eagle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllByAppointmentDateAfter",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "passionFruit",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "turk@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/docs/getallafterdate/10-05-2022",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"docs",
+								"getallafterdate",
+								"10-05-2022"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBySpecialty",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "passionFruit",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "turk@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/docs/getbyspecialty/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"docs",
+								"getbyspecialty",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Message JMS",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "passionFruit",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "turk@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/docs/getmsg",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"docs",
+								"getmsg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Message JMS",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "passionFruit",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "turk@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "HELLO FROM THE DOCTOR SIDE "
+						},
+						"url": {
+							"raw": "localhost:8080/docs/postmsg/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"docs",
+								"postmsg",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patient Controller",
+			"item": [
+				{
+					"name": "getAllByAllergy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "passionFruit",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "turk@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/patients/allergy/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients",
+								"allergy",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllInWaitingList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/patients/waiting",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients",
+								"waiting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post message JMS",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "pomidor",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "elvira@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "Hello from post method!"
+						},
+						"url": {
+							"raw": "localhost:8080/patients/postmsg/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients",
+								"postmsg",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get message JMS",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "pomidor",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "elvira@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/patients/getmsg",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients",
+								"getmsg"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
